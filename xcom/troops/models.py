@@ -2,6 +2,11 @@ from django.db import models
 
 # Create your models here.
 
+class Stats(models.Model):
+	date = models.DateField('Date')
+	def getDate(self):
+		return self.date.strftime('%d/%m/%Y')
+
 class Role(models.Model):
 	name = models.CharField(max_length = 50)
 	def __str__(self):
@@ -26,7 +31,7 @@ class Squad(models.Model):
 class Soldier(models.Model):
 	name = models.CharField(max_length = 100)
 	joined = models.DateField('Joined')
-	squad = models.ForeignKey(Squad)
+	squad = models.ForeignKey(Squad, null=True)
 	role = models.ForeignKey(Role)
 	rank = models.ForeignKey(Rank)
 	status = models.ForeignKey(Status)
@@ -41,6 +46,8 @@ class SoldierEvent(models.Model):
 	event = models.CharField(max_length = 200)
 	def getDate(self):
 		return self.date.strftime('%d/%m/%Y')
+	def __str__(self):
+		return self.getDate() + ": " + self.soldier.name + " - " + self.event
 
 class MissionType(models.Model):
 	name = models.CharField(max_length = 100)
