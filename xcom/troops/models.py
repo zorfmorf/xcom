@@ -72,6 +72,12 @@ class Mission(models.Model):
 	def getDate(self):
 		return self.date.strftime('%d/%m/%Y')
 
+class Deployment(models.Model):
+	soldier = models.ForeignKey(Soldier)
+	mission = models.ForeignKey(Mission)
+	def __str__(self):
+		return self.soldier.name + " deployed on " + self.mission.name
+
 # log geoscape events (build x, shot down ufo, etc)
 class Event(models.Model):
 	name = models.CharField(max_length = 100)

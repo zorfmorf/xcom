@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 from django.core.exceptions import ObjectDoesNotExist
 from django.template import RequestContext
-from django.views.decorators.csrf import csrf_exempt
 from itertools import chain
 import sys
 
@@ -16,19 +15,23 @@ from troops.models import Event
 from troops.models import Mission
 from troops.models import Stats
 
-@csrf_exempt
 def index(request):
-	sys.stderr.write(str(request.GET.get('name', 'empty')) + '\n')
+	#sys.stderr.write(str(request.GET.get('name', 'empty')) + '\n')
 	if request.method == 'GET' and request.GET.get('name', 'empty') is not 'empty':
 		addRookie(request.GET.get("name"))
 	date = Stats.objects.get(pk=1)
-	soldiers = Soldier.objects.order_by('joined')#[:5]
+	soldiers = Soldier.objects.order_by('rank')#[:5]
+	soldiers = soldiers.reverse()
 	events = Event.objects.order_by('date')[:5]
 	missions = Mission.objects.order_by('date')[:5]
 	lastevents = list(chain(events, missions))
 	lastevents.sort(key=lambda r: r.date, reverse=True)
 	context = {'soldiers': soldiers, 'lastevents': lastevents, 'date': date}
 	return render(request, 'troops/index.html', context)
+
+def addEvent(request):
+	#deployment code goes here
+	return render(request, 'troops/event.html', {})
 	
 def soldier(request, soldier_id):
 	try:
