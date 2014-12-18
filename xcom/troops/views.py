@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+from troops.models import Soldier
+
+def index(request):
+	soldiers = Soldier.objects.order_by('joined')#[:5]
+	context = {'soldiers': soldiers}
+	return render(request, 'troops/index.html', context)

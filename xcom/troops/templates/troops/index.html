@@ -1,0 +1,29 @@
+{% load staticfiles %}
+
+{% include "troops/header.html" %}
+
+<div class="soldiers">
+	<h1>Troops</h1>
+	<table class="table">
+		<tr>
+			<th>Name</th>
+			<th>Joined</th>
+			<th>Squad</th>
+			<th>Role</th>
+			<th>Rank</th>
+			<th>Status</th>
+		</tr>
+		{% for soldier in soldiers %}
+			<tr>
+				<td>{{soldier.name}}</td>
+				<td>{{soldier.joinDate}}</td>
+				<td>{{soldier.squad.name}}</td>
+				<td>{{soldier.role.name}}</td>
+				<td>{{soldier.rank.name}}</td>
+				<td>{{soldier.status.name}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+</div>
+
+{% include "troops/footer.html" %}

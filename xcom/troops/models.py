@@ -32,6 +32,8 @@ class Soldier(models.Model):
 	status = models.ForeignKey(Status)
 	def __str__(self):
 		return self.name
+	def joinDate(self):
+		return self.joined.strftime('%d/%m/%Y')
 
 class SoldierEvent(models.Model):
 	soldier = models.ForeignKey(Soldier)
@@ -58,6 +60,8 @@ class Mission(models.Model):
 	dead = models.IntegerField(default=0)
 	def __str__(self):
 		return self.name
+	def missionDate(self):
+		return self.date.strftime('%d/%m/%Y')
 
 # log geoscape events (build x, shot down ufo, etc)
 class Event(models.Model):
