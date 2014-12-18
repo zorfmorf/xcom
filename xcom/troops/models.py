@@ -32,13 +32,15 @@ class Soldier(models.Model):
 	status = models.ForeignKey(Status)
 	def __str__(self):
 		return self.name
-	def joinDate(self):
+	def getDate(self):
 		return self.joined.strftime('%d/%m/%Y')
 
 class SoldierEvent(models.Model):
 	soldier = models.ForeignKey(Soldier)
 	date = models.DateField('Date')
 	event = models.CharField(max_length = 200)
+	def getDate(self):
+		return self.date.strftime('%d/%m/%Y')
 
 class MissionType(models.Model):
 	name = models.CharField(max_length = 100)
@@ -60,7 +62,7 @@ class Mission(models.Model):
 	dead = models.IntegerField(default=0)
 	def __str__(self):
 		return self.name
-	def missionDate(self):
+	def getDate(self):
 		return self.date.strftime('%d/%m/%Y')
 
 # log geoscape events (build x, shot down ufo, etc)
@@ -69,3 +71,5 @@ class Event(models.Model):
 	date = models.DateField('Date')
 	def __str__(self):
 		return self.name
+	def getDate(self):
+		return self.date.strftime('%d/%m/%Y')

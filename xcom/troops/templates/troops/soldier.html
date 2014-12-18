@@ -1,0 +1,57 @@
+{% load staticfiles %}
+
+{% include "troops/header.html" %}
+
+<div class="soldier">
+	<h1>Soldier</h1>
+	<form class="form-horizontal" role="form">
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Name</label>
+			<div class="col-sm-10">
+				<p class="form-control-static">{{soldier.name}}</p>
+			</div>
+			<label class="col-sm-2 control-label">Joined</label>
+			<div class="col-sm-10">
+				<p class="form-control-static">{{soldier.getDate}}</p>
+			</div>
+			<label class="col-sm-2 control-label">Squad</label>
+			<div class="col-sm-10">
+				<p class="form-control-static">{{soldier.squad.name}}</p>
+			</div>
+			<label class="col-sm-2 control-label">Role</label>
+			<div class="col-sm-10">
+				<p class="form-control-static">{{soldier.role.name}}</p>
+			</div>
+			<label class="col-sm-2 control-label">Rank</label>
+			<div class="col-sm-10">
+				<p class="form-control-static">{{soldier.rank.name}}</p>
+			</div>
+			<label class="col-sm-2 control-label">Status</label>
+			<div class="col-sm-10">
+				<p class="form-control-static">{{soldier.status.name}}</p>
+			</div>
+		</div>	
+	</form>
+	<div>
+		<h1>Recent Events</h1>
+		<table class="table">
+			<tr>
+				<th>Date</th>
+				<th>Desc.</th>
+			</tr>
+			{% for event in events %}
+				<tr>
+					<td>{{event.getDate}}</td>
+					{% if event.squad %}
+						<td>Deployment: <a href="event.id">{{event.name}}</a></td>
+					{% else %}
+						<td>{{event.event}}</td>
+					{% endif %}
+				</tr>
+			{% endfor %}
+		</table>
+	</div>
+	<p><a href="/troops/">	<button type="button" class="btn btn-primary">Back</button></a></p>
+</div>
+
+{% include "troops/footer.html" %}

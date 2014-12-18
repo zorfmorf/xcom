@@ -10,17 +10,26 @@ body {
     background-color: #fefefe;
 }
 
-/* Space at the beginning of the page */
-.hspace
-{
-	height: 20px;
-	background-color: #fdfdfd;
-}
-
 .soldiers
 {
 	position: relative;
 	float: left;
 	width: 600px;
+	padding: 10px;
+}
+
+.lastevents
+{
+	position: relative;
+	float: left;
+	width: 700px;
+	padding: 10px;
+}
+
+.soldier
+{
+	position: relative;
+	float: left;
+	width: 700px;
 	padding: 10px;
 }
