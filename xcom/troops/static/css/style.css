@@ -12,7 +12,6 @@ body {
 
 .soldiers
 {
-	position: relative;
 	float: left;
 	width: 600px;
 	padding: 10px;
@@ -20,8 +19,7 @@ body {
 
 .lastevents
 {
-	position: relative;
-	float: left;
+	float: right;
 	width: 700px;
 	padding: 10px;
 }

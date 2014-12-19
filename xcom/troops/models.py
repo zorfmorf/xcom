@@ -43,11 +43,11 @@ class Soldier(models.Model):
 class SoldierEvent(models.Model):
 	soldier = models.ForeignKey(Soldier)
 	date = models.DateField('Date')
-	event = models.CharField(max_length = 200)
+	name = models.CharField(max_length = 200)
 	def getDate(self):
 		return self.date.strftime('%d/%m/%Y')
 	def __str__(self):
-		return self.getDate() + ": " + self.soldier.name + " - " + self.event
+		return self.getDate() + ": " + self.soldier.name + " - " + self.name
 
 class MissionType(models.Model):
 	name = models.CharField(max_length = 100)
@@ -75,6 +75,8 @@ class Mission(models.Model):
 class Deployment(models.Model):
 	soldier = models.ForeignKey(Soldier)
 	mission = models.ForeignKey(Mission)
+	result = models.ForeignKey(Status, null=True)
+	days = models.IntegerField(default=0)
 	def __str__(self):
 		return self.soldier.name + " deployed on " + self.mission.name
 

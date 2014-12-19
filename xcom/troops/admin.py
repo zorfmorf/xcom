@@ -10,6 +10,7 @@ from troops.models import MissionResult
 from troops.models import Mission
 from troops.models import Event
 from troops.models import Stats
+from troops.models import Deployment
 
 # Register your models here.
 admin.site.register(Role)
@@ -23,3 +24,4 @@ admin.site.register(MissionResult)
 admin.site.register(Mission)
 admin.site.register(Event)
 admin.site.register(Stats)
+admin.site.register(Deployment)

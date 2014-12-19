@@ -41,7 +41,7 @@
 		<p><a href="/troops/">	<button type="button" class="btn btn-primary">Back</button></a></p>
 	</div>
 	<div>
-		<h1>Recent Events</h1>
+		<h1>Service records</h1>
 		<table class="table">
 			<tr>
 				<th>Date</th>
@@ -53,7 +53,7 @@
 					{% if event.squad %}
 						<td>Deployment: <a href="event.id">{{event.name}}</a></td>
 					{% else %}
-						<td>{{event.event}}</td>
+						<td>{{event.name}}</td>
 					{% endif %}
 				</tr>
 			{% endfor %}
