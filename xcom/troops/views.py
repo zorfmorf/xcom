@@ -63,7 +63,7 @@ def assign(request, soldier_id):
 			event = SoldierEvent()
 			event.soldier = sold
 			event.date = date.date
-			event.event = 'Assigned to ' + squad.name + ' squad'
+			event.name = 'Assigned to ' + squad.name + ' squad'
 			event.save()
 	return redirect('index')
 
@@ -81,5 +81,5 @@ def addRookie(name):
 	event = SoldierEvent()
 	event.soldier = soldier
 	event.date = date.date
-	event.event = 'Arrived at Xcom'
+	event.name = 'Arrived at Xcom'
 	event.save()
