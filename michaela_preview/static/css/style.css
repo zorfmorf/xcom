@@ -1,0 +1,33 @@
+{% load staticfiles %}
+
+/* 
+ * 
+ * Personal CSS markup by Sebastian Tauch
+ * 
+ */
+
+body {
+    background-color: #fefefe;
+}
+
+.soldiers
+{
+	float: left;
+	width: 600px;
+	padding: 10px;
+}
+
+.lastevents
+{
+	float: right;
+	width: 700px;
+	padding: 10px;
+}
+
+.soldier
+{
+	position: relative;
+	float: left;
+	width: 700px;
+	padding: 10px;
+}
