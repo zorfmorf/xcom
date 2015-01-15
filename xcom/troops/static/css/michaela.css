@@ -49,6 +49,7 @@ html, body {
 #customnav
 {
 	background-color: #b84747;
+	border-bottom: 0px;
 }
 
 #about {
@@ -56,7 +57,6 @@ html, body {
 
 #services {
   background-color: #b84747;
-  color: #ffffff;
 }
 #services .glyphicon {
   border: 2px solid #FFFFFF;
@@ -92,4 +92,14 @@ footer .glyphicon:hover {
 .fontwhite
 {
 	color: white !important;
+}
+
+.large
+{
+	font-size: 20px;
+}
+
+.bkgred
+{
+	background-color: #b84747;
 }

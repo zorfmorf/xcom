@@ -34,15 +34,15 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			  </button>
-			  <a class="navbar-brand fontwhite" href="#">Ernährungsberatung Michaela Tauch</a>
+			  <a class="navbar-brand fontwhite large" href="#">Ernährungsberatung Michaela Tauch</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="navbar-collapse-main">
 			  <ul class="nav navbar-nav navbar-right">
 				<!-- <li><a class="fontwhite" href="#home">Home</a></li> -->
-				<li><a class="fontwhite" href="#uber">Über</a></li>
-				<li><a class="fontwhite" href="#beratung">Beratung</a></li>
-				<li><a class="fontwhite" href="#google_map">Kontakt</a></li>
+				<li><a class="fontwhite large" href="#uber">Philosophie</a></li>
+				<li><a class="fontwhite large" href="#beratung">Beratung</a></li>
+				<li><a class="fontwhite large" href="#kontakt">Kontakt</a></li>
 			  </ul>
 			</div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
@@ -51,16 +51,7 @@
 		<!-- first section - Home -->
 			<div id="home" class="home">
 			  <div class="text-vcenter">
-				<h1 class="fontwhite">Erfolgreich zum Wohlfühlgewicht</h1>
-			  </div>
-			</div>
-		<!-- /first section -->
-		
-		<!-- Another section -->
-			<div id="services" class="services">
-			  <div class="text-vcenter">
-				<h1 class="fontwhite">Hello World</h1>
-				<h3 class="fontwhite">This is bootstrap-based layout</h3>
+				<!--<h1 class="fontwhite">Erfolgreich zum Wohlfühlgewicht</h1> -->
 			  </div>
 			</div>
 		<!-- /first section -->
@@ -74,6 +65,7 @@
 				  </div>
 				  <div class="col-sm-6 text-center">
 					<h1>Erfolgreich zum Wohlfühlgewicht</h1>
+					<p class="lead"></p>
 					<p class="lead">Es geht nicht darum mehrere Wochen lang eine Diät einzuhalten um dann endlich wieder normal essen zu können. Wenn sie langfristig zu ihrem Wohlfühlgewicht kommen wollen, gilt es die Einstellung zum essen ändern.</p>
 					<p class="lead">Hier dann vielleicht was zu dem eigentlichen Produkt das du einsetzt von denen du auch geschult bist. Ich weiß jetzt nicht wie die so heißen aber ich nenn es jetzt einfach mal superfit (tm).</p>
 				  </div>
@@ -83,34 +75,51 @@
 		<!-- /second section -->
 		
 		<!-- third section - Services -->
-			<div id="beratung" class="pad-section">
+			<div id="beratung" class="pad-section bkgred">
 			  <div class="container">
-				<h2 class="text-center">Ich biete Ihnen</h2> <hr />
+				<h2 class="text-center fontwhite">Ich biete Ihnen</h2> <hr />
 				<div class="row text-center">
 				  <div class="col-sm-3 col-xs-6">
-					<i class="glyphicon glyphicon-cloud"> </i>
-					<h4>Individuelle Beratung</h4>
-					<p>Zusammen schauen wir wo sie Schwierigkeiten haben und versuchen daran zu arbeiten.</p>
-				  </div>
-				  <div class="col-sm-3 col-xs-6">
-					<i class="glyphicon glyphicon-leaf"> </i>
-					<h4>Ein offenes Ohr</h4>
-					<p>Ich bin immer für sie da, ob Tag oder Nacht, rufen sie mich einfach an. Auch Sonntags.</p>
+					<i class="glyphicon glyphicon-user"> </i>
+					<h4 class="fontwhite">Individuelle Beratung</h4>
+					<p class="fontwhite">Zusammen schauen wir wo sie Schwierigkeiten haben und versuchen daran zu arbeiten.</p>
 				  </div>
 				  <div class="col-sm-3 col-xs-6">
 					<i class="glyphicon glyphicon-phone-alt"> </i>
-					<h4>Schnupperkurs</h4>
-					<p>Kommen sie jederzeit vorbei und ich biete Ihnen eine kostenlose Vitaminbehandlung und Reizüberflutung.</p>
+					<h4 class="fontwhite">Ein offenes Ohr</h4>
+					<p class="fontwhite">Ich bin immer für sie da, ob Tag oder Nacht, rufen sie mich einfach an. Auch Sonntags.</p>
 				  </div>
 				  <div class="col-sm-3 col-xs-6">
-					<i class="glyphicon glyphicon-bullhorn"> </i>
-					<h4>Was auf die Mütze</h4>
-					<p>Mir fällt kein weiterer Unsinn ein den ich noch schreiben könnte aber brauche Blindtexte</p>
+					<i class="glyphicon glyphicon-leaf"> </i>
+					<h4 class="fontwhite">Schnupperkurs</h4>
+					<p class="fontwhite">Kommen sie jederzeit vorbei und ich biete Ihnen eine kostenlose Vitaminbehandlung und Reizüberflutung.</p>
+				  </div>
+				  <div class="col-sm-3 col-xs-6">
+					<i class="glyphicon glyphicon-thumbs-up"> </i>
+					<h4 class="fontwhite">Was auf die Mütze</h4>
+					<p class="fontwhite">Mir fällt kein weiterer Unsinn ein den ich noch schreiben könnte aber brauche Blindtexte</p>
 				  </div>
 				</div>
 			  </div>
 			</div>
 		<!-- /third section -->
+		
+		<!-- kontakt -->
+			<div id="kontakt" class="pad-section">
+			  <div class="container">
+				<div class="row">
+				  <div class="col-sm-3">
+					<img src="{% static "media/placeholder.jpg" %}" alt="" />
+				  </div>
+				  <div class="col-sm-6 text-left">
+					<h2>Interesse? Melden Sie sich!</h2>
+					<p class="lead"></p>
+					<p class="lead">Email: michaela.tauch@ernaehrungsberatung.de</p>
+					<p class="lead">Telefon: 07542/8857</p>
+				  </div>
+				</div>
+			  </div>
+			</div>
 
 			<!-- google map -->
 			<div id="google_map"></div>
